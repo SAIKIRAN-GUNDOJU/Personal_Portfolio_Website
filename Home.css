@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Global Styles */
+:root {
+    --dark-navy: #0a192f;
+    --light-navy: #112240;
+    --navy: #233554;
+    --mint: #64ffda;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    background-color: var(--dark-navy);
+    color: var(--light-slate);
+}
+
+.dark-theme {
+    background-color: var(--dark-navy);
+    color: var(--light-slate);
+}
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, var(--light-navy) 0%, var(--dark-navy) 100%);
+    opacity: 0.5;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.navbar-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--mint) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo-border {
+    border: 2px solid var(--mint);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-link {
+    color: var(--lightest-slate) !important;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--mint) !important;
+}
+
+/* Home Section */
+.home-bg {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.home-heading {
+    font-size: 4rem;
+    color: var(--lightest-slate);
+    margin-bottom: 1rem;
+}
+
+.home-span {
+    color: var(--mint);
+}
+
+.home-para {
+    font-size: 1.5rem;
+    color: var(--light-slate);
+    margin-bottom: 2rem;
+}
+
+.home-button {
+    background-color: transparent;
+    border: 2px solid var(--mint);
+    color: var(--mint);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.profile-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.home-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.home-image:hover {
+    filter: none;
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    color: var(--lightest-slate);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    background-color: var(--light-navy);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.about-text {
+    color: var(--light-slate);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-text {
+    color: var(--mint);
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 0;
+    background-color: var(--light-navy);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.skill-item {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-item i {
+    font-size: 3rem;
+    color: var(--mint);
+    margin-bottom: 1rem;
+}
+
+.skill-item span {
+    color: var(--lightest-slate);
+    font-size: 1rem;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 100px 0;
+}
+
+.project-card {
+    background-color: var(--light-navy);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--lightest-slate);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--light-slate);
+    margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    background-color: var(--navy);
+    color: var(--mint);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Contact Modal */
+.modal-content {
+    background-color: var(--light-navy);
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--navy);
+}
+
+.modal-title {
+    color: var(--lightest-slate);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.contact-info {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--mint);
+}
+
+.contact-details h6 {
+    color: var(--lightest-slate);
+    margin-bottom: 0.5rem;
+}
+
+.contact-details a {
+    color: var(--light-slate);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--mint);
+}
+
+/* Animations */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px var(--mint);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--mint);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--mint);
+    }
+}
+
+.glow-effect:hover {
+    animation: glow 1.5s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-heading {
+        font-size: 3rem;
+    }
+    
+    .home-para {
+        font-size: 1.2rem;
+    }
+    
+    .profile-container {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .home-heading {
+        font-size: 2.5rem;
+    }
+    
+    .section-heading {
+        font-size: 2rem;
+    }
+    
+    .profile-container {
+        width: 200px;
+        height: 200px;
+    }
+}
